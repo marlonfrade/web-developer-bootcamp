@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário do Investidor</title>
+    <link rel="stylesheet" href="Invest Form.css">
+</head>
+
+<body
+style="#"
+>
+    <span>
+        <h1 id="h1">Formulário do Investidor</h1>
+    </span>
+
+    <form action="/search">
+
+        <div>
+            <label for="username"> Escolha um nome de usuário:</label>
+            <input type="text" name="username" id="username" placeholder="usuário" required size="45"
+                pattern="[a-z]{4,8}" title="4 to 8 lowercase letters">
+            <span class="validity"></span>
+            <p>Usuário deve ser em letra minúscula e de 4-8 caracteres.</p>
+        </div>
+        <div>
+            <label for="password">Escolha uma senha:</label>
+            <input type="password" name="password" id="password" placeholder="Senha" required size="45" minlength="8">
+            <span class="validity"></span>
+            <p>Senha deve possuir pelo menos 8 caracteres.</p>
+        </div>
+
+        <div>
+            <label for="birth">Preencha sua Data de Nascimento:</label>
+            <input name="birth" id="birth" type="date" value="2003-05-14" min="1921-01-01" max="2003-05-14" required
+                size="45">
+            <span class="validity"></span>
+            <p>Usuário deve ter +18 anos.</p>
+        </div>
+
+        <div>
+            <label for="email">Digite seu melhor e-mail</label>
+            <input type="email" name="email" id="email" required placeholder="formulariodoinvestidor@exemplo.com"
+                size="45" list="defaultemails" /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$ />
+            <datalist id="defaultemails">
+                <option value="">
+                <option value="">
+                <option value="">
+                <option value="">
+                <option value="">
+            </datalist>
+
+        </div>
+
+        <p>Queremos Lhe Enviar Recomendações:</p>
+
+        <div>
+            <label>Digite seu número de telefone:
+                [<input name="country" id="country" placeholder="+55" aria-label="2-digit area code" size="1" />]-
+                (<input name="area" id="area" type="tel" pattern="[0-9]{2}" placeholder="XX"
+                    aria-label="2-digit area code" size="1" />)-
+                <input name="tel1" id="tel1" type="tel" pattern="[0-9]{5}" placeholder="9XXXX"
+                    aria-label="5-digit prefix" size="4" /> -
+                <input name="tel2" id="tel2" type="tel" pattern="[0-9]{4}" placeholder="XXXX"
+                    aria-label="4-digit number" size="3" />
+            </label>
+        </div>
+
+        <h2>Que tipo de Investimento Você faz?</h2>
+        <div>
+            <!--Pode-se deixar esse opção selecionada previamente usando o atributo checked, ao 
+clicar em outra alternativa automaticamente substitui   -->
+            <input type="radio" id="buyandhold" name="investing" value="buyandhold" checked>
+            <label for="buyandhold">Buy And Hold</label>
+        </div>
+        <div>
+            <input type="radio" id="swingtrade" name="investing" value="swingtrade">
+            <label for="swingtrade">Swing Trade</label>
+        </div>
+        <div>
+            <input type="radio" id="daytrade" name="investing" value="daytrade">
+            <label for="daytrade">Day Trade</label>
+        </div>
+        <h2>Selecione o Tipo de Investimento:</h2>
+        <div>
+            <label for="invest-select">Qual seu tipo de investimento?</label>
+            <select name="invest-select" id="invest-select">
+                <option value="">Escolha um investimento</option>
+                <option value="Fiis">Fundos Imobiliários</option>
+                <option value="Renda-Fixa">Renda Fixa</option>
+                <option value="Poupança">Poupança</option>
+                <option value="Bolsa-valores">Bolsa de Valores</option>
+                <option value="Ativos-internacionais">Ativos Internacionai</option>
+                <option value="BDR">BDR</option>
+                <option value="Criptomoeda">Criptomoedas</option>
+            </select>
+        </div>
+        <h2>E qual seu nível de conhecimento Sobre esse Investimento?</h2>
+        <div>
+            <!-- Ao utilizar o input tipo range podemos colocar além de máximo e mínimo um step, q
+defina em quantos passos cada range é dado, ou se é selecionado apenas por numero 
+impares ou pares -->
+            <input type="range" id="conhecimento" name="conhecimento" min="0" max="10" value="5" step="1">
+            <label for="conhecimento">Conhecimento</label>
+        </div>
+        <h2>Quanto você tem alocado nesse investimento?</h2>
+        <div>
+            <label for="valor">Quantia:</label>
+            <input type="number" id="valor" name="valor" value="valor" placeholder="$" min="0" max="1000000">
+        </div>
+        <div>
+            <label for="comentario">Como esse investimento está rendendo em sua carteira?</label>
+            <br>
+            <!-- Quando utilizar o comando text area devemos colocar a quantidade de linhas e 
+colunas que utilizaremos  -->
+            <textarea name="comentario" id="comentario" cols="30" rows="10"
+                placeholder="Escreva sobre seu investimento"></textarea>
+        </div>
+
+
+
+
+
+        <hr>
+        <div>
+            <input type="checkbox" id="agree" name="agree" checked>
+            <label for="agree"> Eu concordo com os termos</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="age" name="age" required>
+            <label for="agree"> Eu confirmo que tenho +18 anos.</label>
+        </div>
+        <div>
+            <button>Finalizar Inscrição</button>
+        </div>
+
+    </form>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<%- include('partials/head.ejs') %>
+
+
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="container">
+        <h1>Browsing the <%= name %> subreddit </h1>
+        <h2><%= description  %> </h2>
+        <p><%= subscribers  %>Total subscribers </p>
+        <hr>
+
+        <%   for(let post of posts){ %>
+        <article>
+            <p><%= post.title %> - <b><%= post.author %> </b> </p>
+            <% if(post.img){ %>
+            <img src="<%= post.img %> " alt="">
+            <% } %>
+        </article>
+        <% } %>
+    </div>
+</body>
+
+</html>

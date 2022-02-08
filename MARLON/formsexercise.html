@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Register Form</title>
+</head>
+
+<body>
+
+    <h1>Race Registration!</h1>
+
+    <form action="/race">
+
+        <div>
+            <label for="first"> First Name</label>
+            <input type="text" name="first" id="first" required>
+            <label for="last">Last Name</label>
+            <input type="text" name="last" id="last" required>
+        </div>
+
+        <p>Select a Race:</p>
+
+        <div>
+            <input type="radio" id="5k" name="race" value="5k" checked>
+            <label for="5k">Fun Run 5k</label>
+        </div>
+
+        <div>
+            <input type="radio" id="Half" name="race" value="half">
+            <label for="Half">Half Marathon</label>
+        </div>
+
+        <div>
+            <input type="radio" id="full" name="race" value="full">
+            <label for="full">Full Marathon</label>
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"
+                /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$ />
+
+            <label for="password">Pasword</label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <div>
+            <label for="age"> Select Age Group</label>
+            <select name="age" id="age">
+                <option value="-18">Under 18</option>
+                <option value="18-30">18-30</option>
+                <option value="30-50">30-50</option>
+                <option value="50+">50+</option>
+
+            </select>
+        </div>
+
+        <div>
+            <button>Register!</button>
+        </div>
+
+
+
+
+
+
+
+    </form>
+
+
+</body>
+
+</html>
